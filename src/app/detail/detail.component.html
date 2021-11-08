@@ -1,25 +1,88 @@
 <section id="detail-weather">
   <div class="container widget">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-8">
         <p>Wednesday 08 Oct 2020 | 4:30PM</p>
       </div>
-      <div class="col-sm-4">
+      <div class="col-4">
         <p>Kosice, Slovakia</p>
       </div>
     </div>
-    <div class="row justify-content-around">
-      <div class="col-sm-3">
-        <p>Sunny</p>
+    <div class="row justify-content-around align-items-center text-center">
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'cloud-sun']"></fa-icon>
+          <p>Sunny</p>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <p>33C</p>
+      <div class="col-3">
+        <p class="temperature">33&#x2103;</p>
       </div>
-      <div class="col-sm-3">27C</div>
+      <div class="col-3">
+        <div>
+          <div class="d-flex justify-content-center align-items-baseline">
+            <p class="temp-arr">35&#x2103;</p>
+            <fa-icon
+              class="mini"
+              [icon]="['fas', 'long-arrow-alt-up']"
+            ></fa-icon>
+          </div>
+          <div class="d-flex justify-content-center align-items-baseline">
+            <p class="temp-arr">27&#x2103;</p>
+            <fa-icon
+              class="mini"
+              [icon]="['fas', 'long-arrow-alt-down']"
+            ></fa-icon>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <fa name="cog" animation="spin"></fa> -->
-    <a href="#" class="btn btn-outline-secondary btn-lg">
-      <i class="fa-solid fa-address-book"></i> Read More
-    </a>
+    <div class="row justify-content-around align-items-center text-center">
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'tint']"></fa-icon>
+          <p class="line-h-5">49%</p>
+          <p class="line-h-5">Humidity</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'tachometer-alt']"></fa-icon>
+          <p class="line-h-5">1,007mBar</p>
+          <p class="line-h-5">Pressure</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'wind']"></fa-icon>
+          <p class="line-h-5">1,007mBar</p>
+          <p class="line-h-5">Pressure</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-around align-items-center text-center">
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'angle-double-up']"></fa-icon>
+          <p class="line-h-5">6:03AM</p>
+          <p class="line-h-5">Sunrise</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'angle-double-down']"></fa-icon>
+          <p class="line-h-5">7:05PM</p>
+          <p class="line-h-5">Sunset</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div>
+          <fa-icon [icon]="['fas', 'hourglass-half']"></fa-icon>
+          <p class="line-h-5">1,007mBar</p>
+          <p class="line-h-5">Pressure</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <div></div>
 </section>
