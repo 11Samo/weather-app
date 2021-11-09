@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
     'Koromľa',
     'Košice',
     'Michalovce',
-    'Sobranovce',
+    'Sobrance',
   ];
 
   cityControl: FormControl;

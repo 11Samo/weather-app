@@ -12,7 +12,7 @@ import { WeatherService } from '../weather.service';
 export class DetailComponent implements OnInit {
   data$: Observable<any>;
   today: Date = new Date();
-
+  location: string;
   loading = false;
 
   constructor(
@@ -28,8 +28,9 @@ export class DetailComponent implements OnInit {
         this.loading = true;
       }),
       concatMap((name) => this.weatherService.getWeatherForCity(name)),
-      tap(() => {
+      tap((dat) => {
         this.loading = false;
+        this.location = this.route.snapshot.paramMap.get('locationName');
       })
     );
   }
