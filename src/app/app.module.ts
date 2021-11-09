@@ -13,11 +13,16 @@ import { WeatherReportComponent } from './weather-report/weather-report.componen
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DetailComponent,
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
   },
   {
     path: ':locationName',
@@ -26,7 +31,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, DetailComponent, WeatherReportComponent],
+  declarations: [
+    AppComponent,
+    DetailComponent,
+    WeatherReportComponent,
+    SearchComponent,
+  ],
   imports: [
     BrowserModule,
     FontAwesomeModule,

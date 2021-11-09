@@ -23,6 +23,7 @@ export class WeatherService {
   //     return this.http.get(path);
   //   }
   getWeatherForCity(name: string): Observable<any> {
+    console.log('som tu');
     const coords = this.getCoordinate(name);
     const path = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=minutely,hourly,alerts&units=metric&appid=0fa8a4eec652a4e4df199a8b3e413e50`;
 
