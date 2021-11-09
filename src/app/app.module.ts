@@ -17,11 +17,11 @@ import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {
     path: '',
-    component: WeatherReportComponent,
+    component: DetailComponent,
   },
   {
     path: ':locationName',
-    component: WeatherReportComponent,
+    component: DetailComponent,
   },
 ];
 

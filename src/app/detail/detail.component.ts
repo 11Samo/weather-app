@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { concatMap, filter, map, tap } from 'rxjs/operators';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,7 +10,27 @@ import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  constructor() {}
+  data$: Observable<any>;
+  today: Date = new Date();
 
-  ngOnInit(): void {}
+  loading = false;
+
+  constructor(
+    private weatherService: WeatherService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.data$ = this.route.params.pipe(
+      map((params) => params.locationName),
+      filter((name) => !!name),
+      tap(() => {
+        this.loading = true;
+      }),
+      concatMap((name) => this.weatherService.getWeatherForCity(name)),
+      tap(() => {
+        this.loading = false;
+      })
+    );
+  }
 }

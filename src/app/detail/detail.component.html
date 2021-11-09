@@ -1,14 +1,14 @@
-<section id="detail-weather">
+<section id="detail-weather" *ngIf="data$ | async as data">
   <div class="container widget">
     <div class="row">
       <div class="col-8">
         <p class="mt-2 font-weight-bold grey text-center">
-          Wednesday 08 Oct 2020 | 4:30PM
+          {{ today | date: "dd MMM yyyy hh:mm a" }}
         </p>
       </div>
       <div class="col-4 city">
         <div class="d-flex mt-2">
-          <p class="font-weight-bold">Kosice, Slovakia</p>
+          <p class="font-weight-bold">{{ data.name }}, Slovakia</p>
           <fa-icon
             class="map-marker"
             [icon]="['fas', 'map-marker-alt']"
@@ -20,7 +20,9 @@
       <div class="col-3">
         <div>
           <fa-icon class="grey" [icon]="['fas', 'cloud-sun']"></fa-icon>
-          <p class="montserrat weight-700 size-2">Sunny</p>
+          <p class="montserrat weight-700 size-2">
+            {{ data.weather[0].description | titlecase }}
+          </p>
         </div>
       </div>
       <div class="col-3">
@@ -198,3 +200,8 @@
     </div>
   </div>
 </section>
+<div class="container" *ngIf="!data$ | async">
+  <div class="row justify-content-center">
+    <p style="background-color: red; color: white">Something wrong</p>
+  </div>
+</div>
