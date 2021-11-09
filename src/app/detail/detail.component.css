@@ -1,6 +1,11 @@
 .widget {
   border: 1px solid black;
-  border-radius: 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding-bottom: 50px;
+  box-shadow: 0 -15px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* margin-top: -15px; */
 }
 
 fa-icon {
@@ -22,4 +27,9 @@ fa-icon {
 .mini {
   font-size: 0.7rem;
   padding-left: 3px;
+}
+
+.day {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 }
