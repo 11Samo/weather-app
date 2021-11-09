@@ -9,10 +9,32 @@ import {
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
 import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons';
+import { WeatherReportComponent } from './weather-report/weather-report.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: WeatherReportComponent,
+  },
+  {
+    path: ':locationName',
+    component: WeatherReportComponent,
+  },
+];
 
 @NgModule({
-  declarations: [AppComponent, DetailComponent],
-  imports: [BrowserModule, FontAwesomeModule],
+  declarations: [AppComponent, DetailComponent, WeatherReportComponent],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

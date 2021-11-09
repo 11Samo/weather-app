@@ -8,4 +8,13 @@
     />
     <app-detail class="col" style="z-index: 15"></app-detail>
   </div>
+  <select
+    name="selectus"
+    id="sel"
+    class="form-control"
+    [formControl]="cityControl"
+  >
+    <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+  </select>
+  <router-outlet></router-outlet>
 </div>

@@ -7,7 +7,6 @@ import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  filmIcon = faAddressBook;
   constructor() {}
 
   ngOnInit(): void {}

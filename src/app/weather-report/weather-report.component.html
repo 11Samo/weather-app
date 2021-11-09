@@ -1,0 +1,5 @@
+<div class="container" *ngIf="data$ | async as data">
+  <p>{{ data.name }}'s weather</p>
+  <p>{{ data.main.temp | number: "0.0-0" }} C</p>
+  <p>{{ data.weather[0].description | titlecase }}</p>
+</div>
