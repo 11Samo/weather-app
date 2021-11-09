@@ -1,15 +1,30 @@
 .widget {
-  border: 1px solid black;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   padding-bottom: 50px;
-  box-shadow: 0 -15px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  /* margin-top: -15px; */
+  box-shadow: 0 -15px 5px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-top: -40px;
 }
 
 fa-icon {
   font-size: 2.5rem;
+}
+
+.map-marker {
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.grey-text {
+  color: rgb(165, 163, 163);
+}
+
+.city {
+  background-color: #9ed6f0;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  color: #158cc4;
 }
 
 .temperature {

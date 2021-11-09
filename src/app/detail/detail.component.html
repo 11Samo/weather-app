@@ -2,10 +2,18 @@
   <div class="container widget">
     <div class="row">
       <div class="col-8">
-        <p>Wednesday 08 Oct 2020 | 4:30PM</p>
+        <p class="mt-2 font-weight-bold grey-text text-center">
+          Wednesday 08 Oct 2020 | 4:30PM
+        </p>
       </div>
-      <div class="col-4">
-        <p>Kosice, Slovakia</p>
+      <div class="col-4 city">
+        <div class="d-flex mt-2">
+          <p class="font-weight-bold">Kosice, Slovakia</p>
+          <fa-icon
+            class="map-marker"
+            [icon]="['fas', 'map-marker-alt']"
+          ></fa-icon>
+        </div>
       </div>
     </div>
     <div class="row justify-content-around align-items-center text-center">
