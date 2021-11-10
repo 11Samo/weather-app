@@ -27,16 +27,16 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.cityControl = new FormControl('');
-    this.cityControl.valueChanges
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((value) => {
-        this.router.navigate([value]);
-      });
+    // this.cityControl = new FormControl('');
+    // this.cityControl.valueChanges
+    //   .pipe(takeUntil(this.unsubscribe$))
+    //   .subscribe((value) => {
+    //     this.router.navigate([value]);
+    //   });
   }
 
   ngOnDestroy() {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    // this.unsubscribe$.next();
+    // this.unsubscribe$.complete();
   }
 }

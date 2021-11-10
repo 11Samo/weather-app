@@ -5,6 +5,7 @@
   box-shadow: 0 -15px 5px rgba(0, 0, 0, 0.3);
   background-color: white;
   margin-top: -300px;
+  animation: load-site 3000ms;
 }
 
 fa-icon {
@@ -79,4 +80,14 @@ fa-icon {
 
 ul li {
   list-style-type: none;
+}
+
+@keyframes load-site {
+  0% {
+    margin-top: -80px;
+  }
+
+  100% {
+    margin-top: -300px;
+  }
 }

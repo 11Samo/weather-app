@@ -12,13 +12,13 @@
           type="text"
           class="form-control montserrat"
           placeholder="Search city..."
-          (keypress)="searchCity($event)"
+          (keyup)="searchCity($event)"
         />
       </div>
     </div>
     <div class="row">
       <ul class="col text-center mt-4">
-        <li *ngFor="let city of cities" class="mb-2">
+        <li *ngFor="let city of searchCities" class="mb-2">
           <a
             class="montserrat text-dark weight-600 letter-sp-1 size-2"
             [routerLink]="['../', city]"

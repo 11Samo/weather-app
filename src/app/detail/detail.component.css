@@ -5,6 +5,7 @@
   box-shadow: 0 -15px 5px rgba(0, 0, 0, 0.3);
   background-color: white;
   margin-top: -80px;
+  animation: load-site2 3000ms;
 }
 
 fa-icon {
@@ -79,4 +80,14 @@ fa-icon {
 
 .forecast-icon {
   width: 60px;
+}
+
+@keyframes load-site2 {
+  0% {
+    margin-top: -300px;
+  }
+
+  100% {
+    margin-top: -80px;
+  }
 }
