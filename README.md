@@ -9,5 +9,5 @@
 - Angular
 
 ---
-![Screenshot of site](weather_app_screenshot1.jpg)
 ![Screenshot of site](weather_app_screenshot2.jpg)
+![Screenshot of site](weather_app_screenshot1.jpg)
