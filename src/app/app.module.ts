@@ -9,7 +9,6 @@ import {
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
 import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons';
-import { WeatherReportComponent } from './weather-report/weather-report.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,12 +30,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DetailComponent,
-    WeatherReportComponent,
-    SearchComponent,
-  ],
+  declarations: [AppComponent, DetailComponent, SearchComponent],
   imports: [
     BrowserModule,
     FontAwesomeModule,
@@ -54,4 +48,3 @@ export class AppModule {
     library.addIcons(faCoffee);
   }
 }
-// export class AppModule {}

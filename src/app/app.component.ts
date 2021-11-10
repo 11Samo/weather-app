@@ -9,10 +9,7 @@ import { takeUntil } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, OnDestroy {
-  private unsubscribe$ = new Subject<void>();
-  title = 'weather-app';
-
+export class AppComponent {
   cities = [
     'Bratislava',
     'Humenné',
@@ -24,19 +21,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   cityControl: FormControl;
 
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-    // this.cityControl = new FormControl('');
-    // this.cityControl.valueChanges
-    //   .pipe(takeUntil(this.unsubscribe$))
-    //   .subscribe((value) => {
-    //     this.router.navigate([value]);
-    //   });
-  }
-
-  ngOnDestroy() {
-    // this.unsubscribe$.next();
-    // this.unsubscribe$.complete();
-  }
+  constructor() {}
 }

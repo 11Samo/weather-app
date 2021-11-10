@@ -33,27 +33,12 @@ export class SearchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.data$ = this.route.params.pipe(
-    //   map((params) => params.locationName),
-    //   filter((name) => !!name),
-    //   tap(() => {
-    //     this.loading = true;
-    //   }),
-    //   concatMap((name) => this.weatherService.getWeatherForCity(name)),
-    //   tap((dat) => {
-    //     this.loading = false;
-    //     this.location = this.route.snapshot.paramMap.get('locationName');
-    //   })
-    // );
     this.searchCities = this.cities;
     this.data$ = this.weatherService.getCurrentTemp('Bratislava');
     console.log(this.data$, 'this.data$');
   }
 
   searchCity(event: Event) {
-    // this.searchCities = this.cities.filter((city) =>
-    //   city.toLowerCase().startsWith((<HTMLInputElement>event.target).value)
-    // );
     let searchedCities = [];
     for (let city of this.cities) {
       if (
