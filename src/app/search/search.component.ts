@@ -26,6 +26,7 @@ export class SearchComponent implements OnInit {
   search: string;
   location: string;
   searchCities: string[];
+  temperatures: number[] = [];
 
   constructor(
     private weatherService: WeatherService,
@@ -34,8 +35,12 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchCities = this.cities;
-    this.data$ = this.weatherService.getCurrentTemp('Bratislava');
-    console.log(this.data$, 'this.data$');
+
+    for (let city of this.cities) {
+      this.weatherService.getCurrentTemp(city).subscribe((result) => {
+        this.temperatures.push(result.main.temp);
+      });
+    }
   }
 
   searchCity(event: Event) {

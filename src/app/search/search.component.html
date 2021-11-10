@@ -17,13 +17,15 @@
       </div>
     </div>
     <div class="row">
-      <ul class="col text-center mt-4">
-        <li *ngFor="let city of searchCities" class="mb-2">
+      <ul class="col text-left mt-4">
+        <li *ngFor="let city of searchCities; let i = index" class="mb-2">
           <a
-            class="montserrat text-dark weight-600 letter-sp-1 size-2"
+            class="montserrat text-dark weight-600 letter-sp-1 size-2 d-flex"
             [routerLink]="['../', city]"
-            >{{ city }}</a
           >
+            <p class="col-8 montserrat">{{ city }}</p>
+            <p class="col-4 montserrat">{{ temperatures[i] }} &#x2103;</p>
+          </a>
         </li>
       </ul>
     </div>
