@@ -151,7 +151,14 @@
     </div>
     <div class="row justify-content-around align-items-center text-center mt-4">
       <div class="col-3 day">
-        <fa-icon class="grey" [icon]="['fas', 'cloud-rain']"></fa-icon>
+        <!-- <fa-icon class="grey" [icon]="['fas', 'cloud-rain']"></fa-icon> -->
+        <img
+          src="http://openweathermap.org/img/wn/{{
+            data.daily[1].weather[0].icon
+          }}@2x.png"
+          alt="forecast-icon"
+          class="forecast-icon"
+        />
         <p class="line-h-5 weight-700 size-2 mt-2">
           {{ data.daily[1].dt * 1000 | date: "EEE, dd" }}
         </p>
@@ -181,7 +188,14 @@
         </div>
       </div>
       <div class="col-3 day">
-        <fa-icon class="grey" [icon]="['fas', 'cloud-showers-heavy']"></fa-icon>
+        <!-- <fa-icon class="grey" [icon]="['fas', 'cloud-showers-heavy']"></fa-icon> -->
+        <img
+          src="http://openweathermap.org/img/wn/{{
+            data.daily[2].weather[0].icon
+          }}@2x.png"
+          alt="forecast-icon"
+          class="forecast-icon"
+        />
         <p class="line-h-5 weight-700 size-2 mt-2">
           {{ data.daily[2].dt * 1000 | date: "EEE, dd" }}
         </p>
@@ -211,7 +225,14 @@
         </div>
       </div>
       <div class="col-3 day">
-        <fa-icon class="grey" [icon]="['fas', 'cloud-sun-rain']"></fa-icon>
+        <!-- <fa-icon class="grey" [icon]="['fas', 'cloud-sun-rain']"></fa-icon> -->
+        <img
+          src="http://openweathermap.org/img/wn/{{
+            data.daily[3].weather[0].icon
+          }}@2x.png"
+          alt="forecast-icon"
+          class="forecast-icon"
+        />
         <p class="line-h-5 weight-700 size-2 mt-2">
           {{ data.daily[3].dt * 1000 | date: "EEE, dd" }}
         </p>

@@ -7,6 +7,8 @@ import { City } from '../city';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
+  // data$: Observable<any>;
+
   cities = [
     'Bratislava',
     'Humenné',
@@ -19,8 +21,22 @@ export class SearchComponent implements OnInit {
   search: string;
 
   constructor() {}
+  ngOnInit() {}
 
-  ngOnInit(): void {}
+  // ngOnInit(): void {
+  //   this.data$ = this.route.params.pipe(
+  //     map((params) => params.locationName),
+  //     filter((name) => !!name),
+  //     tap(() => {
+  //       this.loading = true;
+  //     }),
+  //     concatMap((name) => this.weatherService.getWeatherForCity(name)),
+  //     tap((dat) => {
+  //       this.loading = false;
+  //       this.location = this.route.snapshot.paramMap.get('locationName');
+  //     })
+  //   );
+  // }
 
   searchCity(event: Event) {
     this.cities = this.cities.filter((city) =>
